@@ -1,0 +1,120 @@
+html {
+    scroll-behavior: smooth;
+    background-color: #52c2bc; !important;
+    height: 100%; !important;
+    color: white; !important;
+    overflow: auto; !important;
+}
+body {
+    color: white; !important;
+    font-family: 'Poppins', sans-serif; !important;
+}
+a:link{
+    color: white; !important;
+}
+a:visited{
+    color: white; !important;
+}
+
+.input {
+    max-width: 50%; !important;
+    margin-left: auto;
+}
+.submit_btn button {
+    background-color: #1b8992; !important;
+    border-color: transparent    ; !important;
+    border-radius: 5px; !important;
+    color: white; !important;
+}
+.submit_btn button:hover {
+    transition: border-color 0.3s; !important;
+    border-color: black   ; !important;
+    border-radius: 5px; !important;
+}
+
+.buttons a {
+    background-color: #1b8992; !important;
+    border-color: transparent    ; !important;
+    border-radius: 5px; !important;
+}
+.buttons a:hover {
+    transition: border-color 0.3s; !important;
+    border-color: black   ; !important;
+    border-radius: 5px; !important;
+}
+
+input {
+    min-width: 40% !important;
+    max-width: 60% ; !important;
+    margin: 1% !important;
+    margin-left: auto !important;
+}
+
+select {
+    -webkit-appearance: menulist-button; !important;
+    -moz-appearance:none; !important;
+    margin-left: auto !important;
+}
+
+nav {
+    position: sticky; !important;
+    top: 0px; !important;
+    margin: 10%; !important;
+    overflow: hidden; !important;
+    background-color: #1b8992; !important;
+    border-radius: 4px; !important;
+    z-index: 1; !important;
+}
+
+.navbar-item a:hover {
+    color: black; !important;
+    border: 1px solid #0E9CAB; !important;
+    border-radius: 4px; !important;
+    transition: color 0.2s linear; !important;
+    position: absolute; !important;
+    background-color: #04A6B5; !important;
+    color: white ; !important;
+}
+#page-container{
+    position:relative; !important;
+    min-height:100vh; !important;
+}
+
+#content-wrap{
+    padding-bottom: 2.5rem; !important;
+}
+
+footer {
+   margin-top: 100px; !important;
+    bottom: 0px; !important;
+    width: 100%; !important;
+    color: black !important;
+}
+
+footer a {
+    color: black !important;
+    border-size: 5px; !important;
+    border-bottom: black !important;
+    font-weight: bold; !important;
+}
+
+table {
+    border-color: gray; !important;
+    border-radius: 15px; !important;
+    background-color: #0E9CAB; !important;
+}
+
+.hero-body{
+    background-image: url("../images/background.jpg"); !important;
+   background-color: white; !important;
+    overflow:hidden; !important;
+
+}
+.hero-body p {
+    color: white; !important;
+}
+
+td:hover {
+    border-radius : 15px; !important;
+}
+
