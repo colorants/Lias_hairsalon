@@ -33,7 +33,9 @@ mysqli_close($db);
 
 </head>
 <body>
-
+<a href="dashboard.php" class="navbar-item">
+   dashboard
+</a>
 <section class="hero has-text-centered-desktop">
     <div class="hero-body ">
         <p class="title">
@@ -63,11 +65,12 @@ mysqli_close($db);
                     Mogelijkheden
                 </a>
             </div>
-            <div class="navbar-item">
-                <a href="dashboard.php" class="navbar-item">
-                    Dashboard
+            <div class="navbar-item is-flex is-justify-content-right">
+                <a href="register.php" class="navbar-item">
+                    Log in / Registeren
                 </a>
             </div>
+
         </div>
 
 </nav>
@@ -97,15 +100,6 @@ mysqli_close($db);
                                     src="https://maps.google.com/maps?q=dokter%20diamantlaan%2040&t=&z=13&ie=UTF8&iwloc=&output=embed">
 
                             </iframe>
-                            <style>.google-maps {
-                                    overflow: hidden;
-                                    background: none !important;
-                                    height: 40vh; !important;
-                                    width: 10vw !important
-                                    border-radius: 5px; !important;
-                                    border-color: black; !important;
-
-                                }</style>
                         </div>
                     </div>
                 </div>

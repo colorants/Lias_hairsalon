@@ -25,7 +25,7 @@
     <div id="navbar" class="navbar-menu">
         <div class="navbar-start is-center m-auto">
             <div class="navbar-item">
-                <a href="index.php" class="navbar-item">
+                <a href="index.php" class="navbar-item is-justify-content-space-between">
                     Home
                 </a>
             </div>
@@ -39,11 +39,12 @@
                     Mogelijkheden
                 </a>
             </div>
-            <div class="navbar-item">
-                <a href="dashboard.php" class="navbar-item">
-                    Dashboard
+            <div class="navbar-item is-flex is-justify-content-right">
+                <a href="register.php" class="navbar-item">
+                    Log in / Registeren
                 </a>
             </div>
+
         </div>
 
 </nav>

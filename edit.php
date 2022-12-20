@@ -1,7 +1,9 @@
 <?php
 //Gets customer ID from the url
 $data = $_GET['id'];
-
+require_once 'connection.php';
+$query = "SELECT * FROM appointments WHERE id = '$data'";
+$result = mysqli_query($db, $query);
 //Check if form is submitted
 if(isset($_POST['submit'])) {
     require_once 'connection.php';
@@ -16,7 +18,7 @@ if(isset($_POST['submit'])) {
 
     if(empty($error)) {
         $query = "UPDATE 
-                    appointments 
+                    appointments
                   SET 
                     fullName = '$fullName', 
                     email = '$email', 
@@ -81,11 +83,12 @@ if(isset($_POST['submit'])) {
                     Mogelijkheden
                 </a>
             </div>
-            <div class="navbar-item">
-                <a href="dashboard.php" class="navbar-item">
-                    Dashboard
+            <div class="navbar-item is-flex is-justify-content-right">
+                <a href="register.php" class="navbar-item">
+                    Log in / Registeren
                 </a>
             </div>
+
         </div>
 
 </nav>
@@ -108,8 +111,7 @@ if(isset($_POST['submit'])) {
 </div>
 
 
-<div class="container">
-    <form action="" method="post" class="" enctype="multipart/form-data">
+    <form action="" method="post" class="m-auto " enctype="multipart/form-data">
         <label for="fullName" class="label">Naam :</label>
         <input class="input" type="text" name="fullName" id="fullName" placeholder="Volledige naam" value="<?= $fullName ?? '' ?>">
         <span class="has-text-danger"><?php if (isset($error['fullName'])) {
@@ -167,12 +169,12 @@ if(isset($_POST['submit'])) {
         </div>
     </form>
 
-</div>
-<footer class="has-text-centered is-flex-align-items-flex-end mt-3 p-3">
+<footer class="has-text-centered m-auto p-3" id="footer">
     <p>
-        Reservering systeem door <a href="https://github.com/colorants">Viggo van der Ven</a>. Deze
-        website is gemaakt voor Lia's Hairsalon.
+        Reservering systeem door <a href="https://github.com/colorants">Viggo van der Ven</a>.
+        Deze website is gemaakt voor Lia's Hairsalon.
     </p>
+
 </footer>
 </body>
 </html>

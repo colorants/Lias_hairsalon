@@ -38,7 +38,7 @@ if(isset($_POST['submit'])) {
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<main>
 
 <section class="hero has-text-centered-desktop">
     <div class="hero-body ">
@@ -51,32 +51,33 @@ if(isset($_POST['submit'])) {
     </div>
 </section>
 
-<nav class="m-auto is-flex" role="navigation" aria-label="main navigation">
-    <div id="navbar" class="navbar-menu">
-        <div class="navbar-start is-center m-auto">
-            <div class="navbar-item">
-                <a href="index.php" class="navbar-item is-justify-content-space-between">
-                    Home
-                </a>
-            </div>
-            <div class="navbar-item">
-                <a href="form.php" class="navbar-item">
-                    Afspraak maken
-                </a>
-            </div>
-            <div class="navbar-item">
-                <a href="info.php" class="navbar-item">
-                    Mogelijkheden
-                </a>
-            </div>
-            <div class="navbar-item">
-                <a href="dashboard.php" class="navbar-item">
-                    Dashboard
-                </a>
-            </div>
-        </div>
+    <nav class="m-auto is-flex" role="navigation" aria-label="main navigation">
+        <div id="navbar" class="navbar-menu">
+            <div class="navbar-start is-center m-auto">
+                <div class="navbar-item">
+                    <a href="index.php" class="navbar-item is-justify-content-space-between">
+                        Home
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="form.php" class="navbar-item">
+                        Afspraak maken
+                    </a>
+                </div>
+                <div class="navbar-item">
+                    <a href="info.php" class="navbar-item">
+                        Mogelijkheden
+                    </a>
+                </div>
+                <div class="navbar-item is-flex is-justify-content-right">
+                    <a href="register.php" class="navbar-item">
+                        Log in / Registeren
+                    </a>
+                </div>
 
-</nav>
+            </div>
+
+    </nav>
 
 <h1 class="has-text-centered-desktop m-5">Plan hier uw afspraak</h1>
 
@@ -90,8 +91,7 @@ if(isset($_POST['submit'])) {
     </section>
 <?php endif; ?>
 
-<div class="container">
-    <form action="" method="post" class="ml-auto" enctype="multipart/form-data">
+    <form action="" method="post" class="m-auto   " enctype="multipart/form-data">
         <label for="fullName" class="label">Vul hier uw naam in :</label>
         <input class="input has-icons-left" type="text" name="fullName" id="fullName" placeholder="Volledige naam" value="<?php if(isset($_POST['fullName'])) {
             echo $_POST['fullName'];
@@ -157,8 +157,7 @@ if(isset($_POST['submit'])) {
                 <a class="button is-fullwidth">Terug</a>
             </div>
     </form>
-
-</div>
+</main>
 <footer class="has-text-centered is-flex-align-items-flex-end mt-3 p-3">
     <p>
         Reservering systeem door <a href="https://github.com/colorants">Viggo van der Ven</a>. Deze

@@ -31,3 +31,4 @@ if(!isset($_POST['time']) || $_POST['time'] == '') {
 if(!isset($_POST['treatment']) || $_POST['treatment'] == '') {
     $error['treatment'] = 'Kies aub een behandeling';
 }
+

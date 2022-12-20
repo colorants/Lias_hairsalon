@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+if(!isset($_SESSION['loggedInUser'])) {
+    header("Location: login.php");
+exit();
+}
+
 
 /**@var $appointments */
 //makes connection
@@ -128,11 +135,12 @@ mysqli_close($db);
     <?php } ?>
     </tbody>
 </table>
-<footer class="has-text-centered is-flex-align-items-flex-end mt-3">
+<footer class="has-text-centered m-auto p-3" id="footer">
     <p>
-        <strong>Reservering systeem</strong> door <a href="https://github.com/colorants">Viggo van der Ven</a>. Deze
-        website is gemaakt voor Lia's Hairsalon.
+        Reservering systeem door <a href="https://github.com/colorants">Viggo van der Ven</a>.
+        Deze website is gemaakt voor Lia's Hairsalon.
     </p>
+
 </footer>
 </body>
 

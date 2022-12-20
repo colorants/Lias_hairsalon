@@ -78,7 +78,7 @@ if(isset($_POST['submit'])) {
 
 </nav>
 
-<h1 class="has-text-centered-desktop m-5">Plan hier uw afspraak</h1>
+<h1 class="has-text-centered-desktop m-5">Klanten afspraak</h1>
 
 <?php if (!empty($errors)): ?>
     <section class="content">
@@ -89,9 +89,13 @@ if(isset($_POST['submit'])) {
         </ul>
     </section>
 <?php endif; ?>
-
+<div class="buttons">
+    <div class="back_btn ml-auto mr-6">
+        <a href="dashboard.php" class="button">Terug</a>
+    </div>
+</div>
 <div class="container">
-    <form action="" method="post" class="" enctype="multipart/form-data">
+    <form action="" method="post" class="m-auto" enctype="multipart/form-data">
         <label for="fullName" class="label">Naam :</label>
         <input class="input has-icons-left" type="text" name="fullName" id="fullName" placeholder="Volledige naam" value="<?php if(isset($_POST['fullName'])) {
             echo $_POST['fullName'];
