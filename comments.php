@@ -1,5 +1,5 @@
 <?php
-
+require_once 'secure.php';
 /** @var $db */
 require_once "connection.php";
 

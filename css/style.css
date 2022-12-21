@@ -17,7 +17,12 @@ a:visited{
 }
 
 form {
-    max-width: 50%; !important;
+    max-width: 80%; !important;
+    min-width: 80%; !important;
+}
+
+.form_login {
+    max-width: 80%; !important;
     min-width: 40%; !important;
 }
 .submit_btn button {

@@ -118,7 +118,7 @@ if(isset($_POST['submit'])) {
                         } ?> </span>
                     <!-- Password -->
                                 <label class="label" for="password">Wachtwoord</label>
-                                <input class="input" type="text" name="password" id="password" placeholder="" value=<?php if(isset($_POST['password'])) {
+                                <input class="input" type="password" name="password" id="password" placeholder="" value=<?php if(isset($_POST['password'])) {
                                     echo $_POST['password'];
                                 }?>>
                                 <span class="has-text-danger"><?php if (isset($error['email'])) {

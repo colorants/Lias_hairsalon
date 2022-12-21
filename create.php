@@ -1,4 +1,5 @@
 <?php
+require_once 'secure.php';
 //Check if form is submitted
 if(isset($_POST['submit'])) {
     require_once 'form_validation.php';
