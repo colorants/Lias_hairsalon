@@ -1,6 +1,6 @@
 <?php
-require_once 'secure.php';
-session_start();
+//require_once 'secure.php';
+//session_start();
 
 /**@var $appointments */
 //makes connection

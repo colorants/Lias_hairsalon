@@ -15,10 +15,10 @@ if (isset($_POST['submit'])) {
     // Server-side validation
     $errors = [];
     if ($email == '') {
-        $errors['email'] = 'E-mail is niet gezet';
+        $errors['email'] = 'Gelieve uw emailadres in te vullen';
     }
     if ($password == '') {
-        $errors['password'] = 'Wachtwoord is niet gezet';
+        $errors['password'] = 'Gelieve uw wachtwoord in te vullen';
     }
 
     // If data valid
@@ -33,6 +33,7 @@ if (isset($_POST['submit'])) {
             $login_data = mysqli_fetch_assoc($result);
 
             if (password_verify($password, $login_data['password'])) {
+                $login = true;
                 // Check if the provided password matches the stored password in the database
                 // Store the user in the session
                 echo ("succes");

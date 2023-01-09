@@ -12,9 +12,14 @@ if(isset($_POST['submit'])) {
     if (!isset($_POST['name']) || $_POST['name'] == '') {
         $error['password'] = 'Gelieve uw naam in te vullen';
     }
-    if (!isset($_POST['email']) || $_POST['email'] == '') {
+    if (!isset($_POST['email']) || $_POST['email'] == '' ) {
         $error['email'] = 'Gelieve een emailadres in te vullen';
+        }
+
+    if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ) {
+        $error['email'] = 'Gelieve een geldig email adres in te vullen';
     }
+
     if (!isset($_POST['password']) || $_POST['password'] == '') {
         $error['password'] = 'Gelieve een wachtwoord in te vullen';
     }
@@ -98,34 +103,37 @@ if(isset($_POST['submit'])) {
 </nav>
 <body>
 
-        <h2 class="title">Register With Email</h2>
+<h1 class="has-text-centered-desktop m-5">Registreer hier</h1>
 
                 <form class="is-flex is-flex-direction-column m-auto" action="" method="post">
                     <label class="label" for="name">Naam</label>
                     <input class="input" type="text" name="name" id="name" placeholder="Naam" value=<?php if(isset($_POST['name'])) {
                         echo $_POST['name'];
                     }?>>
-                    <span class="has-text-danger"><?php if (isset($error['name'])) {
+                    <span class="has-text-danger p-1 "><?php if (isset($error['name'])) {
                             echo $error['name'];
                         } ?> </span>
                     <!-- Email -->
                     <label class="label" for="email">Email</label>
-                    <input class="input" type="text" name="email" id="password" placeholder="" value=<?php if(isset($_POST['email'])) {
+                    <input class="input" type="text" name="email" id="password" placeholder="Email" value=<?php if(isset($_POST['email'])) {
                         echo $_POST['email'];
                     }?>>
-                    <span class="has-text-danger"><?php if (isset($error['email'])) {
+                    <span class="has-text-danger p-1 is-size-6"><?php if (isset($error['email'])) {
                             echo $error['email'];
                         } ?> </span>
                     <!-- Password -->
                                 <label class="label" for="password">Wachtwoord</label>
-                                <input class="input" type="password" name="password" id="password" placeholder="" value=<?php if(isset($_POST['password'])) {
+                                <input class="input" type="password" name="password" id="password" placeholder="Wachtwoord" value=<?php if(isset($_POST['password'])) {
                                     echo $_POST['password'];
                                 }?>>
-                                <span class="has-text-danger"><?php if (isset($error['email'])) {
+                                <span class="has-text-danger p-1 is-size-6"><?php if (isset($error['email'])) {
                                         echo $error['password'];
                         } ?> </span>
                     <!-- Submit -->
-                            <button class="button is-link is-fullwidth" type="submit" name="submit">Register</button>
+                    <div class="buttons">
+                        <div class="submit_btn">
+                            <button class="button is-full" name='submit' type="submit">Klaar</button>
+                        </div>
                 </form>
             </section>
 
